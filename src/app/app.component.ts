@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'faculty-website';
+  title = 'Dobrodošli na web stranicu Elektrotehničkog fakulteta u Sarajevu!';
 }
