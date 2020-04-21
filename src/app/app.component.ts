@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'Dobrodošli na web stranicu Elektrotehničkog fakulteta u Sarajevu!';
-}
+export class AppComponent { }
