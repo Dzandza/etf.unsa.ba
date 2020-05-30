@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   isMenuOpen: boolean = false;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -22,8 +23,8 @@ export class NavbarComponent implements OnInit {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  public navClick(event: boolean): void {
-    if (event !== undefined && event !== null) this.isMenuOpen = event;
-    else if (this.isMenuOpen) this.isMenuOpen = false;
+  public navClick(path: string): void {
+    if (this.isMenuOpen) this.isMenuOpen = false;
+    this.router.navigateByUrl(path);
   }
 }

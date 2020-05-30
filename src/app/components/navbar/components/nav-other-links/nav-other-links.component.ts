@@ -6,15 +6,17 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./nav-other-links.component.scss']
 })
 export class NavOtherLinksComponent implements OnInit {
-  @Output() navClick: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() navClick: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  handleNavClick(event): void {
-    this.navClick.emit(false);
+  handleNavClick(path): void {
+    if(path === "/obavjestenja") this.navClick.emit(path);
+    else if(path) window.location.href = path;
+    
   }
 
 }

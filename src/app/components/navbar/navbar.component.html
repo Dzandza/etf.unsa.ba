@@ -1,6 +1,6 @@
 <div class="nav" [ngClass]="isMenuOpen ? 'open-menu' : null">
   <div class="nav-content">
-    <app-logos [isMenuOpen]="isMenuOpen"></app-logos>
+    <app-logos [isMenuOpen]="isMenuOpen" (navClick)="navClick($event)"></app-logos>
     <span class="nav-spacer"></span>
     <app-menu-icon [isMenuOpen]="isMenuOpen" (toggleMenu)="toggleMenu($event)"></app-menu-icon>
     <div class="nav-links">

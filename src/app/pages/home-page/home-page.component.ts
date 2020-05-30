@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-  title = 'Dobrodošli na web stranicu Elektrotehničkog fakulteta u Sarajevu!';
-
   constructor() { }
 
   ngOnInit(): void {

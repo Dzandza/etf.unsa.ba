@@ -1,4 +1,4 @@
 <span class="nav-logos" [ngClass]="isMenuOpen ? 'open-menu' : null">
-  <img src="assets/unsa-logo.svg" alt="University logo" />
-  <img src="assets/etf-logo.svg" alt="Faculty logo" />
+  <img src="assets/unsa-logo.svg" alt="University logo" (click)="handleLogoClick('http://www.unsa.ba/')"/>
+  <img src="assets/etf-logo.svg" alt="Faculty logo" (click)="handleLogoClick('')"/>
 </span>

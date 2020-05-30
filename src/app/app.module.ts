@@ -12,6 +12,11 @@ import { LogosComponent } from './components/navbar/components/logos/logos.compo
 import { NavMainLinksComponent } from './components/navbar/components/nav-main-links/nav-main-links.component';
 import { NavOtherLinksComponent } from './components/navbar/components/nav-other-links/nav-other-links.component';
 import { MenuIconComponent } from './components/navbar/components/menu-icon/menu-icon.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { StudiesPageComponent } from './pages/studies-page/studies-page.component';
+import { ResearchPageComponent } from './pages/research-page/research-page.component';
+import { NewsPageComponent } from './pages/news-page/news-page.component';
+import { ProgramsPageComponent } from './pages/programs-page/programs-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { MenuIconComponent } from './components/navbar/components/menu-icon/menu
     LogosComponent,
     NavMainLinksComponent,
     NavOtherLinksComponent,
-    MenuIconComponent
+    MenuIconComponent,
+    AboutPageComponent,
+    StudiesPageComponent,
+    ResearchPageComponent,
+    NewsPageComponent,
+    ProgramsPageComponent
   ],
   imports: [
     BrowserModule,

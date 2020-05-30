@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logos',
@@ -7,10 +8,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LogosComponent implements OnInit {
   @Input() isMenuOpen: boolean;
+  @Output() navClick: EventEmitter<string> = new EventEmitter<string>();
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  handleLogoClick(path: string): void {
+    if(path === "") this.navClick.emit(path);
+    else window.location.href = path;
   }
 
 }

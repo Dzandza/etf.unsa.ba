@@ -6,15 +6,15 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./nav-main-links.component.scss']
 })
 export class NavMainLinksComponent implements OnInit {
-  @Output() navClick: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() navClick: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  handleNavClick(event): void {
-    this.navClick.emit(false);
+  handleNavClick(path): void {
+    this.navClick.emit(path);
   }
 
 }
