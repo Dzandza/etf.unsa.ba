@@ -1,0 +1,6 @@
+<span class="menu-icon" (click)="handleToggleMenu()" [ngClass]="isMenuOpen ? 'open-menu' : null">
+  <mat-icon [inline]="true" *ngIf="!isMenuOpen; else elseBlock">menu</mat-icon>
+  <ng-template #elseBlock>
+    <mat-icon [inline]="true">close</mat-icon>
+  </ng-template>
+</span>

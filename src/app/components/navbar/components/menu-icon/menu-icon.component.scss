@@ -1,0 +1,35 @@
+@import "../../../../../variables";
+
+.menu-icon {
+  display: none;
+  &:active {
+    background-color: mat-color($app-accent, 50);
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+    border-radius: 50%;
+    padding: 12px 5px 1px 5px;
+    mat-icon {
+      color: mat-color($app-primary);
+      font-size: 35px;
+    }
+    border: 1px solid mat-color($app-primary);
+    background-color: #fff;
+  }
+
+  @media (max-width: 600px) {
+    padding: 8px 5px 0 5px;
+    mat-icon {
+      color: mat-color($app-primary);
+      font-size: 25px;
+    }
+  }
+}
+
+.open-menu {
+  @media (max-width: 768px) {
+    background-color: mat-color($app-accent, A200);
+    border: 1px solid #fff;
+  }
+}

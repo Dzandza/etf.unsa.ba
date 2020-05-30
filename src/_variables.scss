@@ -76,3 +76,23 @@ $app-warn:    mat-palette($mat-red);
 @mixin hover-transition {
     transition: all 0.3s ease-in-out;
 }
+
+@mixin mobile-nav-items {
+    padding: 5px 9%;
+    font-size: 16px;
+    background-color: mat-color($app-primary, 50);
+    border-bottom: 0;
+    border-bottom: 1px solid mat-color($app-primary);
+    width: 100vw;
+    border-radius: 0;
+    color: mat-color($app-primary);
+    text-align: left;
+    transition: none;
+    &:hover {
+      background-color: mat-color($app-accent);
+    }
+  
+    &:active {
+      background-color: mat-color($app-accent);
+    }
+  }

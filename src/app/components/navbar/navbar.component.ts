@@ -15,14 +15,15 @@ export class NavbarComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   resizeListener(event: any) {
-    if(window.innerWidth > 768) this.isMenuOpen = false;
+    if (window.innerWidth > 768) this.isMenuOpen = false;
   }
 
   toggleMenu(event: any): void {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  navClick(event: any): void {
-    if(this.isMenuOpen) this.isMenuOpen = false;
+  public navClick(event: boolean): void {
+    if (event !== undefined && event !== null) this.isMenuOpen = event;
+    else if (this.isMenuOpen) this.isMenuOpen = false;
   }
 }

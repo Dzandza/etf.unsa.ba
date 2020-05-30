@@ -1,26 +1,11 @@
 <div class="nav" [ngClass]="isMenuOpen ? 'open-menu' : null">
   <div class="nav-content">
-    <span>
-      <img src="assets/unsa-logo.svg" alt="University logo" />
-      <img src="assets/etf-logo.svg" alt="Faculty logo" />
-    </span>
+    <app-logos [isMenuOpen]="isMenuOpen"></app-logos>
     <span class="nav-spacer"></span>
-    <span class="menu-icon" (click)="toggleMenu($event)">
-      <mat-icon [inline]="true" *ngIf="!isMenuOpen; else elseBlock">menu</mat-icon>
-      <ng-template #elseBlock><mat-icon [inline]="true">close</mat-icon></ng-template>
-    </span>
+    <app-menu-icon [isMenuOpen]="isMenuOpen" (toggleMenu)="toggleMenu($event)"></app-menu-icon>
     <div class="nav-links">
-      <div class="nav-other">
-        <span class="nav-other-link"><button (click)="navClick($event)" mat-flat-button [disableRipple]="true">Obavještenja</button></span>
-        <span class="nav-other-link"><button (click)="navClick($event)" mat-flat-button [disableRipple]="true">Javne nabavke</button></span>
-        <span class="nav-other-link"><button (click)="navClick($event)" mat-flat-button [disableRipple]="true">Drugi linkovi</button></span>
-      </div>
-      <ul>
-        <li class="nav-item"><button mat-button (click)="navClick($event)" [disableRipple]="true">O fakultetu</button></li>
-        <li class="nav-item"><button mat-button (click)="navClick($event)" [disableRipple]="true">Studij</button></li>
-        <li class="nav-item"><button mat-button (click)="navClick($event)" [disableRipple]="true">Odsjeci</button></li>
-        <li class="nav-item"><button mat-button (click)="navClick($event)" [disableRipple]="true">Naučni rad</button></li>
-      </ul>
+      <app-nav-other-links (navClick)="navClick($event)"></app-nav-other-links>
+      <app-nav-main-links (navClick)="navClick($event)"></app-nav-main-links>
     </div>
   </div>
 </div>

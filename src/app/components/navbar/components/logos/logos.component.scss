@@ -1,0 +1,28 @@
+//Logo styles
+.nav-logos {
+  img {
+    margin: 15px 10px;
+    height: 100px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    transition-property: filter;
+
+    @media (max-width: 768px) {
+      height: 70px;
+      margin: 0 10px;
+    }
+
+    @media (max-width: 600px) {
+      height: 50px;
+      margin: 0 5px;
+    }
+  }
+}
+
+.open-menu {
+  @media (max-width: 768px) {
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
