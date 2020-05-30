@@ -1,22 +1,26 @@
-<mat-toolbar class="nav">
+<div class="nav" [ngClass]="isMenuOpen ? 'open-menu' : null">
   <div class="nav-content">
     <span>
-      <img src="../../../assets/unsa-logo.svg" alt="University logo" />
-      <img src="../../../assets/etf-logo.svg" alt="Faculty logo" />
+      <img src="assets/unsa-logo.svg" alt="University logo" />
+      <img src="assets/etf-logo.svg" alt="Faculty logo" />
     </span>
     <span class="nav-spacer"></span>
+    <span class="menu-icon" (click)="toggleMenu($event)">
+      <mat-icon [inline]="true" *ngIf="!isMenuOpen; else elseBlock">menu</mat-icon>
+      <ng-template #elseBlock><mat-icon [inline]="true">close</mat-icon></ng-template>
+    </span>
     <div class="nav-links">
       <div class="nav-other">
-        <a href="" class="nav-other-link">Obavještenja</a>
-        <a href="" class="nav-other-link">Javne nabavke</a>
-        <a href="" class="nav-other-link">Drugi linkovi</a>
+        <span class="nav-other-link"><button (click)="navClick($event)" mat-flat-button [disableRipple]="true">Obavještenja</button></span>
+        <span class="nav-other-link"><button (click)="navClick($event)" mat-flat-button [disableRipple]="true">Javne nabavke</button></span>
+        <span class="nav-other-link"><button (click)="navClick($event)" mat-flat-button [disableRipple]="true">Drugi linkovi</button></span>
       </div>
       <ul>
-        <li class="nav-item"><a href="">O fakultetu</a></li>
-        <li class="nav-item"><a href="">Studij</a></li>
-        <li class="nav-item"><a href="">Odsjeci</a></li>
-        <li class="nav-item"><a href="">Naučni rad</a></li>
+        <li class="nav-item"><button mat-button (click)="navClick($event)" [disableRipple]="true">O fakultetu</button></li>
+        <li class="nav-item"><button mat-button (click)="navClick($event)" [disableRipple]="true">Studij</button></li>
+        <li class="nav-item"><button mat-button (click)="navClick($event)" [disableRipple]="true">Odsjeci</button></li>
+        <li class="nav-item"><button mat-button (click)="navClick($event)" [disableRipple]="true">Naučni rad</button></li>
       </ul>
     </div>
   </div>
-</mat-toolbar>
+</div>
