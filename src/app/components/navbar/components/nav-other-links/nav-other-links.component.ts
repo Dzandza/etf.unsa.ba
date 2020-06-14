@@ -13,10 +13,9 @@ export class NavOtherLinksComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handleNavClick(path): void {
-    if(path === "/obavjestenja") this.navClick.emit(path);
-    else if(path) window.location.href = path;
-    
+  handleNavClick(): void {
+    this.navClick.emit();
+
   }
 
 }

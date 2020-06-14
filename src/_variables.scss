@@ -78,7 +78,7 @@ $app-warn:    mat-palette($mat-red);
 }
 
 @mixin mobile-nav-items {
-    padding: 5px 9%;
+    padding: 15px 9%;
     font-size: 16px;
     background-color: mat-color($app-primary, 50);
     border-bottom: 0;
@@ -90,9 +90,11 @@ $app-warn:    mat-palette($mat-red);
     transition: none;
     &:hover {
       background-color: mat-color($app-accent);
+      border-bottom: 1px solid mat-color($app-primary);
     }
   
     &:active {
       background-color: mat-color($app-accent);
+      border-bottom: 1px solid mat-color($app-primary);
     }
   }

@@ -6,7 +6,7 @@ ul {
     padding: 0;
     margin: 0;
     position: relative;
-    bottom: -27px;
+    bottom: -28px;
     list-style: none;
 
     @media (max-width: 768px) {
@@ -18,7 +18,8 @@ ul {
     .nav-item {
       display: inline-block;
 
-      button {
+      a {
+        padding: 8px 20px;
         border-radius: 0;
         background-color: mat-color($app-accent, A200);
         border-bottom: 2px solid mat-color($app-accent, A200);
@@ -34,6 +35,7 @@ ul {
         }
 
         @media (max-width: 768px) {
+          display: block;
           @include mobile-nav-items();
         }
       }

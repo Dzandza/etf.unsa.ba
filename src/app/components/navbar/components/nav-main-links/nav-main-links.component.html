@@ -1,22 +1,25 @@
 <ul>
-  <li class="nav-item">
-    <button mat-button (click)="handleNavClick('/o-fakultetu')" [disableRipple]="true">
-      O fakultetu
-    </button>
+  <li class="nav-item" *ngIf="shoudHaveHomePageLink" (click)="handleNavClick()">
+    <a routerLink="/">Početna</a>
   </li>
   <li class="nav-item">
-    <button mat-button (click)="handleNavClick('/studij')" [disableRipple]="true">
+    <a routerLink="/o-fakultetu" (click)="handleNavClick()">
+      O Fakultetu
+    </a>
+  </li>
+  <li class="nav-item" (click)="handleNavClick()">
+    <a routerLink="/studij" >
       Studij
-    </button>
+    </a>
   </li>
-  <li class="nav-item">
-    <button mat-button (click)="handleNavClick('/odsjeci')" [disableRipple]="true">
+  <li class="nav-item" (click)="handleNavClick()">
+    <a routerLink="/odsjeci">
       Odsjeci
-    </button>
+    </a>
   </li>
-  <li class="nav-item">
-    <button mat-button (click)="handleNavClick('/naucni-rad')" [disableRipple]="true">
+  <li class="nav-item" (click)="handleNavClick()">
+    <a routerLink="/naucni-rad">
       Naučni rad
-    </button>
+    </a>
   </li>
 </ul>

@@ -15,16 +15,15 @@ export class NavbarComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  resizeListener(event: any) {
+  resizeListener() {
     if (window.innerWidth > 768) this.isMenuOpen = false;
   }
 
-  toggleMenu(event: any): void {
+  toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  public navClick(path: string): void {
+  public navClick(): void {
     if (this.isMenuOpen) this.isMenuOpen = false;
-    this.router.navigateByUrl(path);
   }
 }

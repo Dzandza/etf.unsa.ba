@@ -1,11 +1,11 @@
 <div class="nav" [ngClass]="isMenuOpen ? 'open-menu' : null">
   <div class="nav-content">
-    <app-logos [isMenuOpen]="isMenuOpen" (navClick)="navClick($event)"></app-logos>
+    <app-logos [isMenuOpen]="isMenuOpen" (navClick)="navClick()"></app-logos>
     <span class="nav-spacer"></span>
-    <app-menu-icon [isMenuOpen]="isMenuOpen" (toggleMenu)="toggleMenu($event)"></app-menu-icon>
+    <app-menu-icon [isMenuOpen]="isMenuOpen" (toggleMenu)="toggleMenu()"></app-menu-icon>
     <div class="nav-links">
-      <app-nav-other-links (navClick)="navClick($event)"></app-nav-other-links>
-      <app-nav-main-links (navClick)="navClick($event)"></app-nav-main-links>
+      <app-nav-other-links (navClick)="navClick()"></app-nav-other-links>
+      <app-nav-main-links (navClick)="navClick()"></app-nav-main-links>
     </div>
   </div>
 </div>

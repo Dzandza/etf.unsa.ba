@@ -1,17 +1,17 @@
 <div class="nav-other">
-  <span class="nav-other-link">
-    <button (click)="handleNavClick('/obavjestenja')" mat-flat-button [disableRipple]="true">
+  <span class="nav-other-link" (click)="handleNavClick()">
+    <a routerLink="/obavjestenja">
       Obavještenja
-    </button>
+    </a>
   </span>
   <span class="nav-other-link">
-    <button (click)="handleNavClick('http://jn.ks.gov.ba/node?field_organizacija_value=98')" mat-flat-button [disableRipple]="true">
+    <a href="http://jn.ks.gov.ba/node?field_organizacija_value=98">
       Javne nabavke
-    </button>
+    </a>
   </span>
-  <span class="nav-other-link">
-    <button (click)="handleNavClick(null)" mat-flat-button [disableRipple]="true">
+  <span class="nav-other-link" >
+    <a>
       Drugi linkovi
-    </button>
+    </a>
   </span>
 </div>

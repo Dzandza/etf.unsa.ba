@@ -9,15 +9,17 @@ import { Router } from '@angular/router';
 export class LogosComponent implements OnInit {
   @Input() isMenuOpen: boolean;
   @Output() navClick: EventEmitter<string> = new EventEmitter<string>();
-  
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   handleLogoClick(path: string): void {
-    if(path === "") this.navClick.emit(path);
-    else window.location.href = path;
+    if (path === "") {
+      this.navClick.emit(path);
+      this.router.navigateByUrl(path);
+    } else window.location.href = path;
   }
 
 }
