@@ -8,7 +8,7 @@
     box-sizing: border-box;
     position: relative;
     left: -5vw;
-    border: 2px solid mat-color($app-primary);
+    border: 2px solid mat-color($app-accent);
     background-image: url("../../../assets/etf-building.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@
 
   .brief {
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: mat-color($app-accent, A200);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -43,7 +43,7 @@
     right: -5vw;
     padding: 30px;
     max-width: 25vw;
-    border: 3px solid mat-color($app-accent);
+    border: 3px solid mat-color($app-primary);
     h1 {
       color: mat-color($app-primary);
 
@@ -65,12 +65,12 @@
         padding: 10px 20px;
         text-decoration: none;
         border: 2px solid mat-color($app-primary);
-        color: mat-color($app-primary);
-        background-color: mat-color($app-accent, A200);
+        background-color: mat-color($app-primary);
+        color: white;
 
         &:hover {
-          background-color: mat-color($app-primary);
-          color: white;
+          color: mat-color($app-primary);
+          background-color: mat-color($app-primary, 50);
         }
 
         @media (max-width: 768px) {
