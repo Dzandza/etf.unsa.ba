@@ -1,3 +1,15 @@
-.centered-container {
-  padding: 0 5%;
+.app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  .centered-container {
+    padding: 0 5%;
+    flex: 1;
+    margin-bottom: 20px;
+    &:after {
+      height: 200px;
+    }
+  }
 }
+
+

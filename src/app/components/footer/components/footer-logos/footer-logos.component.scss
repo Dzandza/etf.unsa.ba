@@ -1,0 +1,21 @@
+//Logo styles
+.footer-logos {
+
+  img {
+    filter: brightness(0) invert(1);
+    margin: 15px 10px;
+    height: 100px;
+    cursor: pointer;
+
+
+    @media (max-width: 600px) {
+      height: 70px;
+      margin: 0 10px;
+    }
+  }
+
+  @media (max-width: 920px) {
+    text-align: center;
+    min-width: 80vw;
+  }
+}

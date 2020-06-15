@@ -17,6 +17,10 @@ import { StudiesPageComponent } from './pages/studies-page/studies-page.componen
 import { ResearchPageComponent } from './pages/research-page/research-page.component';
 import { NewsPageComponent } from './pages/news-page/news-page.component';
 import { ProgramsPageComponent } from './pages/programs-page/programs-page.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { FooterLogosComponent } from './components/footer/components/footer-logos/footer-logos.component';
+import { ContactComponent } from './components/footer/components/contact/contact.component';
+import { AddressComponent } from './components/footer/components/address/address.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import { ProgramsPageComponent } from './pages/programs-page/programs-page.compo
     StudiesPageComponent,
     ResearchPageComponent,
     NewsPageComponent,
-    ProgramsPageComponent
+    ProgramsPageComponent,
+    FooterComponent,
+    FooterLogosComponent,
+    ContactComponent,
+    AddressComponent
   ],
   imports: [
     BrowserModule,

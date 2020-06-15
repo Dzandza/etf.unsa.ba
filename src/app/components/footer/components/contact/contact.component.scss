@@ -1,0 +1,26 @@
+.contact {
+  h2 {
+    text-align: center;
+    color: #fff;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 0;
+    img {
+      display: inline;
+      filter: brightness(0) invert(1);
+    }
+    p {
+      display: inline;
+      text-align: center;
+      color: #fff;
+      margin: 0 5px;
+    }
+  }
+  p {
+    text-align: center;
+    color: #fff;
+  }
+}
