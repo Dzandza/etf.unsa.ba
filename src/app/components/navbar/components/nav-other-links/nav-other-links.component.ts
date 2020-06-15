@@ -6,16 +6,23 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./nav-other-links.component.scss']
 })
 export class NavOtherLinksComponent implements OnInit {
+  language: string;
   @Output() navClick: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() { }
+  constructor() { 
+    this.language = "EN"
+  }
 
   ngOnInit(): void {
   }
 
   handleNavClick(): void {
     this.navClick.emit();
+  }
 
+  changeLanguage(): void {
+    if(this.language === "EN") this.language = "BS";
+    else this.language = "EN";
   }
 
 }

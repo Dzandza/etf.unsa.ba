@@ -9,7 +9,9 @@ export class NavMainLinksComponent implements OnInit {
   shoudHaveHomePageLink: boolean;
   @Output() navClick: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() { }
+  constructor() {
+    this.shoudHaveHomePageLink = window.innerWidth < 768;
+  }
 
   ngOnInit(): void {
   }

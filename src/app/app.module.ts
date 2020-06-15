@@ -21,6 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FooterLogosComponent } from './components/footer/components/footer-logos/footer-logos.component';
 import { ContactComponent } from './components/footer/components/contact/contact.component';
 import { AddressComponent } from './components/footer/components/address/address.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AddressComponent } from './components/footer/components/address/address
     FooterComponent,
     FooterLogosComponent,
     ContactComponent,
-    AddressComponent
+    AddressComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,

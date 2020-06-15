@@ -12,6 +12,11 @@
       content: "\22C5";
       padding: 3px;
     }
+
+    &:nth-child(3):after {
+      content: "\22C5";
+      padding: 3px;
+    }
     a {
       display: inline-block;
       color: mat-color($app-primary);
@@ -45,6 +50,11 @@
       }
 
       &:nth-child(2):after {
+        content: none;
+        padding: 0;
+      }
+
+      &:nth-child(3):after {
         content: none;
         padding: 0;
       }

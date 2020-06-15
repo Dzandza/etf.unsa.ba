@@ -1,0 +1,128 @@
+@import "../../../variables";
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .faculty-img {
+    box-sizing: border-box;
+    position: relative;
+    left: -5vw;
+    border: 2px solid mat-color($app-primary);
+    background-image: url("../../../assets/etf-building.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 60vw;
+    height: 40vw;
+    z-index: -1;
+
+    @media (max-width: 920px) {
+      width: 80vw;
+      height: 400px;
+    }
+
+    @media (max-width: 768px) {
+      left: 0;
+      width: 90vw;
+      height: 300px;
+    }
+
+    @media (max-width: 600px) {
+      height: 250px;
+    }
+  }
+
+  .brief {
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    right: -5vw;
+    padding: 30px;
+    max-width: 25vw;
+    border: 3px solid mat-color($app-accent);
+    h1 {
+      color: mat-color($app-primary);
+
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+
+    p {
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+    .learn-more {
+      text-align: right;
+      margin-top: 20px;
+      a {
+        @include hover-transition();
+        padding: 10px 20px;
+        text-decoration: none;
+        border: 2px solid mat-color($app-primary);
+        color: mat-color($app-primary);
+        background-color: mat-color($app-accent, A200);
+
+        &:hover {
+          background-color: mat-color($app-primary);
+          color: white;
+        }
+
+        @media (max-width: 768px) {
+          padding: 10px 30px;
+        }
+      }
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 920px) {
+      max-width: 35vw;
+    }
+
+    @media (max-width: 768px) {
+      position: absolute;
+      right: 0;
+      left: 0;
+      margin: auto;
+      top: 350px;
+      width: 85vw;
+      max-width: none;
+    }
+
+    @media (max-width: 600px) {
+      top: 300px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+    &:after {
+      display: block;
+      content: "";
+      height: 180px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    display: block;
+    &:after {
+      display: block;
+      content: "";
+      height: 280px;
+    }
+  }
+
+  @media (max-width: 300px) {
+    &:after {
+      content: "";
+      height: 330px;
+    }
+  }
+}
