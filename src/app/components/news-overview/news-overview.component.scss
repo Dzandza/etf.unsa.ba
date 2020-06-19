@@ -1,0 +1,112 @@
+@import "../../../variables";
+
+.news-container {
+  background-color: mat-color($app-accent, A200);
+  box-sizing: border-box;
+  padding: 15px 5%;
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+  h1 {
+    text-align: center;
+    color: mat-color($app-primary);
+  }
+
+  .all-news {
+    text-align: center;
+    margin: 20px 0;
+    a {
+      border-radius: 20px;
+      @include hover-transition();
+      padding: 10px 20px;
+      text-decoration: none;
+      border: 2px solid mat-color($app-primary);
+      background-color: mat-color($app-primary);
+      color: white;
+      text-transform: uppercase;
+
+      &:hover {
+        color: mat-color($app-primary);
+        background-color: mat-color($app-primary, 50);
+      }
+
+      @media (max-width: 768px) {
+        padding: 10px 15vw;
+      }
+
+      @media (max-width: 300px) {
+        padding: 10px 45px;
+      }
+    }
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  .news-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+
+    .news {
+      border-radius: 20px;
+      border: 2px solid mat-color($app-primary);
+      box-sizing: border-box;
+      margin: 10px 1%;
+      padding: 10px;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 30%;
+      background-color: #fff;
+
+      @media (max-width: 768px) {
+        width: 80vw;
+      }
+
+      @media (max-width: 300px) {
+        width: 240px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 3vw;
+  }
+
+  @media (max-width: 700px) {
+    margin-top: 4vw;
+  }
+
+  @media (max-width: 650px) {
+    margin-top: 6vw;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 2vw;
+  }
+
+  @media (max-width: 500px) {
+    margin-top: 10vw;
+  }
+
+  @media (max-width: 450px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 400px) {
+    margin-top: 15vw;
+  }
+
+  @media (max-width: 350px) {
+    margin-top: 5vw;
+  }
+
+  @media (max-width: 300px) {
+    margin-top: 20px;
+  }
+}

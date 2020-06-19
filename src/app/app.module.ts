@@ -22,6 +22,7 @@ import { FooterLogosComponent } from './components/footer/components/footer-logo
 import { ContactComponent } from './components/footer/components/contact/contact.component';
 import { AddressComponent } from './components/footer/components/address/address.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { NewsOverviewComponent } from './components/news-overview/news-overview.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { BannerComponent } from './components/banner/banner.component';
     FooterLogosComponent,
     ContactComponent,
     AddressComponent,
-    BannerComponent
+    BannerComponent,
+    NewsOverviewComponent
   ],
   imports: [
     BrowserModule,
