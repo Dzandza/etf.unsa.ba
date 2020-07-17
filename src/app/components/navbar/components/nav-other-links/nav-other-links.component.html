@@ -1,4 +1,5 @@
 <div class="nav-other">
+  <app-language-icon *ngIf="shouldRenderLanguageIcon" class="nav-other-link"></app-language-icon>
   <span class="nav-other-link" (click)="handleNavClick()">
     <a routerLink="/obavjestenja">
       Obavještenja
@@ -9,14 +10,9 @@
       Javne nabavke
     </a>
   </span>
-  <span class="nav-other-link" >
+  <span class="nav-other-link">
     <a>
       Drugi linkovi
-    </a>
-  </span>
-  <span class="nav-other-link" (click)="changeLanguage()">
-    <a>
-      {{ language }}
     </a>
   </span>
 </div>

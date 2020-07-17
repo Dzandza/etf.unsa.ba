@@ -1,0 +1,149 @@
+@import "../../../variables";
+
+.helpful-links-wrapper {
+  padding: 15px 5%;
+  box-sizing: border-box;
+  width: 100%;
+
+  h1 {
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .card {
+      align-self: stretch;
+      margin: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      height: 250px;
+      min-width: 250px;
+      width: 250px;
+      max-width: 400px;
+      overflow: hidden;
+      border-radius: 5px;
+      border: 2px solid mat-color($app-primary);
+
+      h3 {
+        text-align: center;
+        font-weight: 600;
+      }
+
+      p {
+        text-align: center;
+        display: none;
+      }
+
+      .learn-more {
+        text-align: center;
+        margin-top: 20px;
+        display: none;
+        a {
+          border-radius: 5px;
+          @include hover-transition();
+          padding: 10px 20px;
+          text-decoration: none;
+          background-color: mat-color($app-primary);
+          color: white;
+          cursor: pointer;
+
+          &:hover {
+            background-color: mat-color($app-primary, 400);
+          }
+
+          @media (max-width: 768px) {
+            padding: 10px 30px;
+          }
+        }
+        @media (max-width: 768px) {
+          text-align: center;
+        }
+      }
+      &:hover {
+        p {
+          display: block;
+        }
+
+        .learn-more {
+          display: block;
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        opacity: 0.8;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        opacity: 0.8;
+        background-color: mat-color($app-accent, A200);
+      }
+
+      &:nth-child(1) {
+        &:after {
+          background-image: url("../../../assets/etf-building-2.jpg");
+        }
+      }
+
+      &:nth-child(2) {
+        &:after {
+          background-image: url("../../../assets/etf-amfitheater.jpg");
+        }
+      }
+
+      &:nth-child(3) {
+        &:after {
+          background-image: url("../../../assets/electronics.jpg");
+        }
+      }
+
+      &:nth-child(4) {
+        &:after {
+          background-image: url("../../../assets/etf-students.jpg");
+        }
+      }
+
+      &:nth-child(5) {
+        &:after {
+          background-image: url("../../../assets/erasmus-unsa.jpg");
+        }
+      }
+      @media (max-width: 768px) {
+        p {
+          display: block;
+        }
+
+        .learn-more {
+          display: block;
+        }
+      }
+
+      @media (max-width: 600px) {
+        width: 400px;
+      }
+    }
+  }
+}

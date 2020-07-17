@@ -2,6 +2,7 @@
   <div class="nav-content">
     <app-logos [isMenuOpen]="isMenuOpen" (navClick)="navClick()"></app-logos>
     <span class="nav-spacer"></span>
+    <app-language-icon *ngIf="shouldRenderLanguageIcon"></app-language-icon>
     <app-menu-icon [isMenuOpen]="isMenuOpen" (toggleMenu)="toggleMenu()"></app-menu-icon>
     <div class="nav-links">
       <app-nav-other-links (navClick)="navClick()"></app-nav-other-links>

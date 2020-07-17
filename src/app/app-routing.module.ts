@@ -6,6 +6,7 @@ import { StudiesPageComponent } from './pages/studies-page/studies-page.componen
 import { ResearchPageComponent } from './pages/research-page/research-page.component';
 import { NewsPageComponent } from './pages/news-page/news-page.component';
 import { ProgramsPageComponent } from './pages/programs-page/programs-page.component';
+import { OrganisationsPageComponent } from './pages/organisations-page/organisations-page.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'studij', component: StudiesPageComponent },
   { path: 'odsjeci', component: ProgramsPageComponent },
   { path: 'naucni-rad', component: ResearchPageComponent },
-  { path: 'obavjestenja', component: NewsPageComponent }
+  { path: 'obavjestenja', component: NewsPageComponent },
+  { path: 'organizacije', component: OrganisationsPageComponent }
 ];
 
 @NgModule({

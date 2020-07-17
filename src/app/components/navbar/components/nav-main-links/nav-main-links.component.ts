@@ -6,12 +6,10 @@ import { Component, OnInit, Output, EventEmitter, HostListener } from '@angular/
   styleUrls: ['./nav-main-links.component.scss']
 })
 export class NavMainLinksComponent implements OnInit {
-  shoudHaveHomePageLink: boolean;
+  shoudHaveHomePageLink: boolean = window.innerWidth < 768;;
   @Output() navClick: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() {
-    this.shoudHaveHomePageLink = window.innerWidth < 768;
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }

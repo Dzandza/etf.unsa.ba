@@ -1,0 +1,20 @@
+span {
+  cursor: pointer;
+  img {
+    width: 16px;
+    height: 10px;
+    object-fit: cover;
+    vertical-align: middle;
+    @media (max-width: 768px) {
+        width: 44px;
+        height: 44px;
+        border-radius: 5px;
+    }
+
+    @media (max-width: 600px) {
+      width: 31px;
+      height: 31px;
+      border-radius: 5px;
+  }
+  }
+}

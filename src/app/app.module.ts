@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from "@angular/material/button";
-import {MatIconModule} from '@angular/material/icon'
+import { MatIconModule } from '@angular/material/icon'
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LogosComponent } from './components/navbar/components/logos/logos.component';
@@ -23,6 +23,9 @@ import { ContactComponent } from './components/footer/components/contact/contact
 import { AddressComponent } from './components/footer/components/address/address.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { NewsOverviewComponent } from './components/news-overview/news-overview.component';
+import { LanguageIconComponent } from './components/navbar/components/language-icon/language-icon.component';
+import { HelpfulLinksComponent } from './components/helpful-links/helpful-links.component';
+import { OrganisationsPageComponent } from './pages/organisations-page/organisations-page.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { NewsOverviewComponent } from './components/news-overview/news-overview.
     ContactComponent,
     AddressComponent,
     BannerComponent,
-    NewsOverviewComponent
+    NewsOverviewComponent,
+    LanguageIconComponent,
+    HelpfulLinksComponent,
+    OrganisationsPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, HostListener, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-nav-other-links',
@@ -6,14 +6,19 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./nav-other-links.component.scss']
 })
 export class NavOtherLinksComponent implements OnInit {
-  language: string;
+  language: string = "BS";
+  shouldRenderLanguageIcon: boolean = window.innerWidth >= 768;
   @Output() navClick: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() { 
-    this.language = "EN"
-  }
+  constructor() { }
 
   ngOnInit(): void {
+  }
+
+  @HostListener('window:resize', ['$event'])
+  resizeListener() {
+    if (window.innerWidth < 768) this.shouldRenderLanguageIcon = false;
+    else this.shouldRenderLanguageIcon = true;
   }
 
   handleNavClick(): void {

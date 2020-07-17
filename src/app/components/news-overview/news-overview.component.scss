@@ -6,7 +6,7 @@
   padding: 15px 5%;
   width: 100%;
   margin: 20px 0;
-  text-align: center;
+
   h1 {
     text-align: center;
     color: mat-color($app-primary);
@@ -16,7 +16,7 @@
     text-align: center;
     margin: 20px 0;
     a {
-      border-radius: 20px;
+      border-radius: 5px;
       @include hover-transition();
       padding: 10px 20px;
       text-decoration: none;
@@ -45,26 +45,71 @@
 
   .news-wrapper {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px 0;
 
+    .news-button {
+      user-select: none;
+      display: flex;
+      padding: 10px;
+      text-align: center;
+      color: #fff;
+      flex-grow: 10%;
+      background-color: mat-color($app-primary);
+      align-items: center;
+      cursor: pointer;
+      z-index: 1;
+      @include hover-transition();
+
+      img {
+        height: 10px;
+        width: 10px;
+      }
+
+      &:hover {
+        background-color: mat-color($app-primary, 400);
+      }
+
+      &:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
     .news {
       h3 {
-        margin-bottom: 0;
+        font-weight: 600;
       }
-      
-      border-radius: 20px;
+
+      a {
+        padding: 0 5px;
+        text-decoration: none;
+        color: mat-color($app-primary);
+        @include hover-transition();
+        &:hover {
+          color: mat-color($app-primary, 300);
+        }
+      }
+
+      display: none;
       border: 2px solid mat-color($app-primary);
+      border-right: 0;
+      border-left: 0;
       box-sizing: border-box;
-      margin: 10px 1%;
       padding: 10px;
-      display: inline-flex;
       flex-direction: column;
       justify-content: center;
-      width: 30%;
+      flex: 1;
       background-color: #fff;
 
       @media (max-width: 768px) {
         width: 80vw;
+        text-align: center;
       }
 
       @media (max-width: 300px) {
@@ -72,9 +117,13 @@
       }
     }
 
+    .active {
+      display: flex !important;
+    }
+
     @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: center;
+      // flex-direction: column;
+      // align-items: center;
     }
   }
 

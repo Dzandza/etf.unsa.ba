@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   isMenuOpen: boolean = false;
+  shouldRenderLanguageIcon: boolean = window.innerWidth < 768;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -16,7 +17,8 @@ export class NavbarComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   resizeListener() {
-    if (window.innerWidth > 768) this.isMenuOpen = false;
+    if (window.innerWidth > 768) { this.isMenuOpen = false; this.shouldRenderLanguageIcon = false }
+    else this.shouldRenderLanguageIcon = true;
   }
 
   toggleMenu() {
