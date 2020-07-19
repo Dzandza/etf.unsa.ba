@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news-page.component.scss']
 })
 export class NewsPageComponent implements OnInit {
-
+  routes: any = [{ name: "Početna", link: "" }]
   constructor() { }
 
   ngOnInit(): void {

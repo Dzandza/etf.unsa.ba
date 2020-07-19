@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./research-page.component.scss']
 })
 export class ResearchPageComponent implements OnInit {
+  routes: any = [{ name: "Početna", link: "" }]
 
   constructor() { }
 
