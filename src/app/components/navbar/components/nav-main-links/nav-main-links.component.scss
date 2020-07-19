@@ -18,6 +18,10 @@ ul {
     order: 1;
   }
 
+  @media (max-width: 300px) {
+    width: 300px;
+  }
+
   .nav-item {
     display: inline-block;
 
@@ -40,6 +44,10 @@ ul {
       @media (max-width: 768px) {
         display: block;
         @include mobile-nav-items();
+      }
+
+      @media (max-width: 300px) {
+        width: 300px;
       }
     }
 

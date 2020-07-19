@@ -3,9 +3,16 @@
     <app-logos [isMenuOpen]="isMenuOpen" (navClick)="navClick()"></app-logos>
     <span class="nav-spacer"></span>
     <app-language-icon *ngIf="shouldRenderLanguageIcon"></app-language-icon>
-    <app-menu-icon [isMenuOpen]="isMenuOpen" (toggleMenu)="toggleMenu()"></app-menu-icon>
+    <app-menu-icon
+      [isMenuOpen]="isMenuOpen"
+      (toggleMenu)="toggleMenu()"
+    ></app-menu-icon>
     <div class="nav-links">
-      <app-nav-other-links (navClick)="navClick()"></app-nav-other-links>
+      <app-nav-other-links
+        (navClick)="navClick()"
+        [isDropDownOpen]="isDropDownOpen"
+        (toggleDropDown)="toggleDropDown()"
+      ></app-nav-other-links>
       <app-nav-main-links (navClick)="navClick()"></app-nav-main-links>
     </div>
   </div>

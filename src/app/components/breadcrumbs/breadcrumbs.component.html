@@ -1,0 +1,9 @@
+<div class="breadcrumbs">
+  <span *ngFor="let route of routes" class="breadcrumb">
+    <a routerLink="{{ route.link }}">{{ route.name }}</a>
+    <img src="assets/arrow-icon-right.svg" alt="Arrow icon" />
+  </span>
+  <span class="breadcrumb">
+    <a>{{ currentRoute }}</a>
+  </span>
+</div>

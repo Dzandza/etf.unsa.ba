@@ -59,7 +59,6 @@
       background-color: mat-color($app-primary);
       align-items: center;
       cursor: pointer;
-      z-index: 1;
       @include hover-transition();
 
       img {

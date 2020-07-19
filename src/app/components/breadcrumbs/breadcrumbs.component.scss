@@ -1,0 +1,32 @@
+@import "../../../variables";
+
+.breadcrumbs {
+  .breadcrumb {
+    a {
+      user-select: none;
+      color: mat-color($app-primary);
+      padding: 10px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 400;
+      text-decoration: none;
+      @include hover-transition();
+
+      &:hover {
+        color: mat-color($app-accent, A400);
+      }
+    }
+
+    img {
+      width: 10px;
+      height: 10px;
+    }
+    &:last-child {
+      a {
+        color: #000;
+        cursor: auto;
+      }
+    }
+  }
+}

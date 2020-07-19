@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, HostListener, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-nav-other-links',
@@ -7,8 +7,12 @@ import { Component, HostListener, OnInit, Output, EventEmitter } from '@angular/
 })
 export class NavOtherLinksComponent implements OnInit {
   language: string = "BS";
-  shouldRenderLanguageIcon: boolean = window.innerWidth >= 768;
+  shouldRenderIcons: boolean = window.innerWidth >= 768;
+  @Input() isDropDownOpen: boolean;
+
   @Output() navClick: EventEmitter<string> = new EventEmitter<string>();
+  @Output() toggleDropDown: EventEmitter<string> = new EventEmitter<string>();
+
 
   constructor() { }
 
@@ -17,12 +21,17 @@ export class NavOtherLinksComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   resizeListener() {
-    if (window.innerWidth < 768) this.shouldRenderLanguageIcon = false;
-    else this.shouldRenderLanguageIcon = true;
+    if (window.innerWidth < 768) this.shouldRenderIcons = false;
+    else this.shouldRenderIcons = true;
   }
 
   handleNavClick(): void {
     this.navClick.emit();
+  }
+
+  handleDropDownClick(event) {
+    event.stopPropagation();
+    this.toggleDropDown.emit();
   }
 
   changeLanguage(): void {

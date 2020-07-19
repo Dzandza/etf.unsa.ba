@@ -1,5 +1,8 @@
 <div class="nav-other">
-  <app-language-icon *ngIf="shouldRenderLanguageIcon" class="nav-other-link"></app-language-icon>
+  <app-language-icon
+    *ngIf="shouldRenderIcons"
+    class="nav-other-link"
+  ></app-language-icon>
   <span class="nav-other-link" (click)="handleNavClick()">
     <a routerLink="/obavjestenja">
       Obavještenja
@@ -10,9 +13,17 @@
       Javne nabavke
     </a>
   </span>
-  <span class="nav-other-link">
-    <a>
+  <span
+    class="nav-other-link"
+    [ngClass]="isDropDownOpen ? 'dropdown-active' : null"
+  >
+    <span (click)="handleDropDownClick($event)">
       Drugi linkovi
-    </a>
+      <img *ngIf="!shouldRenderIcons && !isDropDownOpen" src="assets/arrow-icon-down.svg" alt="arrow-icon" />
+      <img *ngIf="!shouldRenderIcons && isDropDownOpen" src="assets/arrow-icon-up.svg" alt="arrow-icon" />
+    </span>
+    <app-dropdown-menu
+      [ngClass]="isDropDownOpen ? 'dropdown-active' : 'dropdown-inactive'"
+    ></app-dropdown-menu>
   </span>
 </div>

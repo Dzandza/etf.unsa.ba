@@ -1,3 +1,51 @@
-h1 {
-    text-align: center;
+@import "../../../variables";
+
+.flex-container {
+  display: flex;
+  margin: 2%;
+  padding: 0 5%;
+  flex-direction: column;
+
+  .title {
+    h1 {
+      font-size: 40px;
+      margin: 16px 10px;
+    }
+  }
+
+  .content-container {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+
+    app-additional-navigation {
+      flex: 0.3;
+    }
+
+    .main-content {
+      flex: 0.65;
+      p {
+        text-overflow: ellipsis;
+
+        a {
+          color: mat-color($app-primary);
+          cursor: pointer;
+          text-decoration: none;
+          @include hover-transition();
+
+          &:hover {
+            color: mat-color($app-accent, A400);
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 }

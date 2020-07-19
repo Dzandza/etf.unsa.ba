@@ -1,0 +1,34 @@
+@import "../../../variables";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-bottom: 20px;
+
+  .additional-route {
+    width: 100%;
+    border-top: 1px solid mat-color($app-accent, A200);
+    &:last-child {
+      border-bottom: 1px solid mat-color($app-accent, A200);
+    }
+    a {
+      display: inline-block;
+      box-sizing: border-box;
+      width: 100% !important;
+      padding: 20px;
+
+      color: mat-color($app-primary);
+      text-decoration: none;
+      @include hover-transition();
+      &:hover {
+        color: mat-color($app-primary, 800);
+      }
+
+      @media (max-width: 768px) {
+        padding: 10px;
+      }
+    }
+  }
+}

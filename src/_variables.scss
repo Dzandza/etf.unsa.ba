@@ -2,100 +2,105 @@
 
 //Primary color palette definition for material
 $primary-palette: (
-    50 : #e0edf5,
-    100 : #b3d1e6,
-    200 : #80b3d6,
-    300 : #4d95c5,
-    400 : #267eb8,
-    500 : #0067ac,
-    600 : #005fa5,
-    700 : #00549b,
-    800 : #004a92,
-    900 : #003982,
-    A100 : #afcbff,
-    A200 : #7caaff,
-    A400 : #4989ff,
-    A700 : #3079ff,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #000000,
-        400 : #ffffff,
-        500 : #ffffff,
-        600 : #ffffff,
-        700 : #ffffff,
-        800 : #ffffff,
-        900 : #ffffff,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #ffffff,
-    )
+  50: #e0edf5,
+  100: #b3d1e6,
+  200: #80b3d6,
+  300: #4d95c5,
+  400: #267eb8,
+  500: #0067ac,
+  600: #005fa5,
+  700: #00549b,
+  800: #004a92,
+  900: #003982,
+  A100: #afcbff,
+  A200: #7caaff,
+  A400: #4989ff,
+  A700: #3079ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #ffffff,
+  ),
 );
 
 //Accent color palette definition for material
 $accent-palette: (
-    50 : #f0f4f8,
-    100 : #dae4ee,
-    200 : #c2d3e3,
-    300 : #a9c1d7,
-    400 : #96b3cf,
-    500 : #84a6c6,
-    600 : #7c9ec0,
-    700 : #7195b9,
-    800 : #678bb1,
-    900 : #547ba4,
-    A100 : #ffffff,
-    A200 : #d5e9ff,
-    A400 : #a2ceff,
-    A700 : #89c0ff,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #000000,
-        400 : #000000,
-        500 : #000000,
-        600 : #000000,
-        700 : #000000,
-        800 : #000000,
-        900 : #ffffff,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #000000,
-    )
+  50: #f0f4f8,
+  100: #dae4ee,
+  200: #c2d3e3,
+  300: #a9c1d7,
+  400: #96b3cf,
+  500: #84a6c6,
+  600: #7c9ec0,
+  700: #7195b9,
+  800: #678bb1,
+  900: #547ba4,
+  A100: #ffffff,
+  A200: #d5e9ff,
+  A400: #a2ceff,
+  A700: #89c0ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
 );
 
 //Color definitions
 $app-primary: mat-palette($primary-palette);
-$app-accent:  mat-palette($accent-palette, A400, A200, A700);
-$app-warn:    mat-palette($mat-red);
+$app-accent: mat-palette($accent-palette, A400, A200, A700);
+$app-warn: mat-palette($mat-red);
 
 @mixin hover-transition {
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @mixin mobile-nav-items {
-    box-sizing: border-box;
-    padding: 15px 9%;
-    font-size: 16px;
-    background-color: mat-color($app-primary, 50);
-    border-bottom: 0;
-    border-bottom: 1px solid mat-color($app-primary);
-    width: 100vw;
-    border-radius: 0;
-    color: mat-color($app-primary);
-    text-align: left;
-    transition: none;
-    &:hover {
-      background-color: mat-color($app-accent);
-      border-bottom: 1px solid mat-color($app-primary);
-    }
-  
-    &:active {
-      background-color: mat-color($app-accent);
-      border-bottom: 1px solid mat-color($app-primary);
-    }
+  box-sizing: border-box;
+  padding: 15px 70px;
+  font-size: 16px;
+  background-color: mat-color($app-primary, 50);
+  border-bottom: 0;
+  border-bottom: 1px solid mat-color($app-primary);
+  width: 100vw;
+  border-radius: 0;
+  color: mat-color($app-primary);
+  text-align: left;
+  transition: none;
+
+  @media (max-width: 600px) {
+    padding: 15px 40px;
   }
+
+  &:hover {
+    background-color: mat-color($app-accent);
+    border-bottom: 1px solid mat-color($app-primary);
+  }
+
+  &:active {
+    background-color: mat-color($app-accent);
+    border-bottom: 1px solid mat-color($app-primary);
+  }
+}

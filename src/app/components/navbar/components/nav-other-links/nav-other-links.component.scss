@@ -2,25 +2,36 @@
 //Top links on the right side of navbar
 .nav-other {
   text-align: right;
+
   .nav-other-link {
+    position: relative;
+    .dropdown-inactive {
+      display: none;
+    }
+
+    .dropdown-active {
+      display: block;
+    }
+
     &:nth-child(1):after {
       content: "\22C5";
-      padding: 3px;
+      padding-left: 10px;
     }
 
     &:nth-child(2):after {
       content: "\22C5";
-      padding: 3px;
     }
 
     &:nth-child(3):after {
       content: "\22C5";
-      padding: 3px;
     }
-    a {
+
+    a,
+    span {
+      user-select: none;
       display: inline-block;
       color: mat-color($app-primary);
-      padding: 10px 0;
+      padding: 10px;
       cursor: pointer;
       text-transform: uppercase;
       font-size: 12px;
@@ -40,8 +51,27 @@
           color: mat-color($app-primary);
         }
       }
+
+      @media (max-width: 300px) {
+        width: 300px;
+      }
     }
 
+    span {
+      transition-property: none;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      border-right: 3px solid #fff;
+      img {
+        height: 12px;
+        width: 12px;
+      }
+
+      @media (max-width: 768px) {
+        border-right: 0;
+      }
+    }
     @media (max-width: 768px) {
       display: block;
       &:nth-child(1):after {
@@ -57,6 +87,27 @@
       &:nth-child(3):after {
         content: none;
         padding: 0;
+      }
+    }
+  }
+
+  .dropdown-active {
+    span {
+      color: mat-color($app-primary);
+      background-color: mat-color($app-accent, 50);
+      border-right: 3px solid mat-color($app-primary);
+
+      &:hover {
+        color: mat-color($app-primary);
+      }
+
+      @media (max-width: 768px) {
+        @include mobile-nav-items();
+        border-right: 0;
+      }
+
+      @media (max-width: 300px) {
+        width: 300px;
       }
     }
   }

@@ -1,0 +1,69 @@
+@import "../../../../../variables";
+
+.dropdown-container {
+  top: 20px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 3;
+  .item {
+    display: block;
+    background-color: mat-color($app-accent, 50);
+    border-right: 3px solid mat-color($app-primary);
+    &:last-child {
+      border-bottom: 3px solid mat-color($app-primary);
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 5px 10px;
+      color: mat-color($app-primary);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 400;
+      text-decoration: none;
+      @include hover-transition();
+      &:hover {
+        background-color: mat-color($app-primary);
+        color: #fff;
+      }
+
+      @media (max-width: 768px) {
+        display: block;
+        @include mobile-nav-items();
+        padding-left: 90px !important;
+        text-transform: none;
+
+        &:hover {
+          color: mat-color($app-primary);
+        }
+      }
+
+      @media (max-width: 600px) {
+        padding-left: 60px !important;
+      }
+
+      @media (max-width: 300px) {
+        width: 300px !important;
+      }
+    }
+    @media (max-width: 768px) {
+      border-right: 0;
+      border-bottom: 0;
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

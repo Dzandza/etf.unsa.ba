@@ -26,6 +26,13 @@ import { NewsOverviewComponent } from './components/news-overview/news-overview.
 import { LanguageIconComponent } from './components/navbar/components/language-icon/language-icon.component';
 import { HelpfulLinksComponent } from './components/helpful-links/helpful-links.component';
 import { OrganisationsPageComponent } from './pages/organisations-page/organisations-page.component';
+import { DropdownMenuComponent } from './components/navbar/components/dropdown-menu/dropdown-menu.component';
+import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
+import { AdditionalNavigationComponent } from './components/additional-navigation/additional-navigation.component';
+import { ServicesPageComponent } from './pages/services-page/services-page.component';
+import { AcademicStaffPageComponent } from './pages/academic-staff-page/academic-staff-page.component';
+import { RegulationsPageComponent } from './pages/regulations-page/regulations-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +56,14 @@ import { OrganisationsPageComponent } from './pages/organisations-page/organisat
     NewsOverviewComponent,
     LanguageIconComponent,
     HelpfulLinksComponent,
-    OrganisationsPageComponent
+    OrganisationsPageComponent,
+    DropdownMenuComponent,
+    BreadcrumbsComponent,
+    AdditionalNavigationComponent,
+    ServicesPageComponent,
+    AcademicStaffPageComponent,
+    RegulationsPageComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,

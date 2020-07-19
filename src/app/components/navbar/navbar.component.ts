@@ -1,5 +1,4 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,8 +8,9 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   isMenuOpen: boolean = false;
+  isDropDownOpen: boolean = false;
   shouldRenderLanguageIcon: boolean = window.innerWidth < 768;
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
@@ -23,6 +23,14 @@ export class NavbarComponent implements OnInit {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  toggleDropDown() {
+    this.isDropDownOpen = !this.isDropDownOpen;
+  }
+
+  closeDropDown() {
+    this.isDropDownOpen = false;
   }
 
   public navClick(): void {
