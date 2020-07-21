@@ -13,6 +13,37 @@
     }
   }
 
+  .content-container {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+
+    app-additional-navigation {
+      flex: 0.3;
+    }
+
+    .main-content {
+      flex: 0.65;
+      p {
+
+        a {
+          color: mat-color($app-primary);
+          cursor: pointer;
+          text-decoration: none;
+          @include hover-transition();
+
+          &:hover {
+            color: mat-color($app-accent, A400);
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+    }
+  }
+
   @media (max-width: 768px) {
     padding: 0;
   }

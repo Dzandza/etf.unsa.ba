@@ -7,10 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AdditionalNavigationComponent implements OnInit {
   @Input() routes: any = [];
+  @Input() currentRouteIndex: number;
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.routes)
   }
 
 }

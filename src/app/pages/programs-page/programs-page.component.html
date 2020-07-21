@@ -1,10 +1,13 @@
 <div class="flex-container">
-    <div class="title">
-      <app-breadcrumbs
-        [routes]="routes"
-        [currentRoute]="'Odsjeci'"
-      ></app-breadcrumbs>
-      <h1>Odsjeci</h1>
-    </div>
+  <div class="title">
+    <app-breadcrumbs
+      [routes]="routes"
+      [currentRoute]="'Odsjeci'"
+    ></app-breadcrumbs>
+    <h1>Odsjeci</h1>
+    <app-program-overview
+      *ngFor="let program of programs"
+      [program]="program"
+    ></app-program-overview>
   </div>
-  
+</div>

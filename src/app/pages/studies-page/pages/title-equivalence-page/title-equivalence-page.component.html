@@ -1,0 +1,29 @@
+<div class="flex-container">
+  <div class="title">
+    <app-breadcrumbs
+      [routes]="routes"
+      [currentRoute]="'Ekvivalencija zvanja'"
+    ></app-breadcrumbs>
+    <h1>Ekvivalencija zvanja</h1>
+  </div>
+  <div class="content-container">
+    <div class="main-content">
+      <h2>
+        Ekvivalencija zvanja diplomirani inženjer elektrotehnike sa zvanjem
+        magistar elektrotehnike - diplomirani inženjer elektrotehnike
+      </h2>
+      <p>
+        Odluku ETF-Sarajevo o uvijetima i načinu ekvivalencije zvanja
+        diplomirani inženjer elektroehnike sa zvanjem magistar elektrotehnike -
+        diplomirani inženjer elektrotehnike možete preuzeti klikom na sljedeći
+        <a>link</a>. 
+      </p>
+      <p>Odluku o Senata Univerziteta u Sarajevu možete preuzeti klikom na
+        sljedeći <a>link</a>.</p>
+    </div>
+    <app-additional-navigation
+      [routes]="additionalRoutes"
+      [currentRouteIndex]="1"
+    ></app-additional-navigation>
+  </div>
+</div>

@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrganisationsPageComponent implements OnInit {
   routes: any = [{ name: "Početna", link: "" }]
-
+  additionalRoutes: any = [
+    { name: "Studentski portal", link: "https://etfba.slack.com/" },
+    { name: "EESTEC", link: "http://eestec-sa.ba/" },
+    { name: "STELEKS", link: "https://www.facebook.com/STELEKS/"}
+  ]
   constructor() { }
 
   ngOnInit(): void {

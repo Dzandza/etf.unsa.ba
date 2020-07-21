@@ -1,0 +1,50 @@
+<div class="flex-container">
+  <div class="title">
+    <app-breadcrumbs
+      [routes]="routes"
+      [currentRoute]="'Propisi'"
+    ></app-breadcrumbs>
+    <h1>Propisi</h1>
+  </div>
+  <div class="content-container">
+    <div class="main-content">
+      <p>
+        Propisi i regulative vezane za studiranje na Elektrotehničkom fakultetu
+        Univerziteta u Sarajevu.
+      </p>
+
+      <p>
+        <a
+          >Zakon o izmjenama i dopunama Zakona o Visokom obrazovanju Kantona Sarajevo</a
+        >
+      </p>
+      <p>
+        <a>Statut Univerziteta u Sarajevu</a>
+      </p>
+      <p>
+        <a
+          >Pravila studiranja za prvi ciklus studija na Univerzitetu u Sarajevu</a
+        >
+      </p>
+      <p>
+        <a
+          >Pravila studiranja za drugi ciklus studija na Univerzitetu u Sarajevu</a
+        >
+      </p>
+      <p>
+        <a
+          >Pravila studiranja za drugi ciklus studija na Univerzitetu u Sarajevu - Izmjene</a
+        >
+      </p>
+      <p>
+        <a
+          >Pravila studiranja za treci ciklus studija na Univerzitetu u Sarajevu</a
+        >
+      </p>
+    </div>
+    <app-additional-navigation
+      [routes]="additionalRoutes"
+      [currentRouteIndex]="2"
+    ></app-additional-navigation>
+  </div>
+</div>

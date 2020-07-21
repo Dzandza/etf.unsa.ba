@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudiesPageComponent implements OnInit {
   routes: any = [{ name: "Početna", link: "" }]
+  additionalRoutes: any = [
+    { name: "Bologna", link: "bologna", },
+    { name: "Ekvivalencija zvanja", link: "ekvivalencija-zvanja", },
+    { name: "Nostrifikacija i ekvivalencija", link: "nostrifikacija-i-ekvivalencija", },
+    { name: "Nastavni kalendar", link: "http://old.unsa.ba/s/index.php?option=com_content&task=blogcategory&id=116&Itemid=171", }
+  ]
   constructor() { }
 
   ngOnInit(): void {

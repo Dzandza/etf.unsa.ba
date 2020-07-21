@@ -29,10 +29,15 @@ import { OrganisationsPageComponent } from './pages/organisations-page/organisat
 import { DropdownMenuComponent } from './components/navbar/components/dropdown-menu/dropdown-menu.component';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 import { AdditionalNavigationComponent } from './components/additional-navigation/additional-navigation.component';
-import { ServicesPageComponent } from './pages/services-page/services-page.component';
-import { AcademicStaffPageComponent } from './pages/academic-staff-page/academic-staff-page.component';
-import { RegulationsPageComponent } from './pages/regulations-page/regulations-page.component';
-import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { ServicesPageComponent } from './pages/about-page/pages/services-page/services-page.component';
+import { AcademicStaffPageComponent } from './pages/about-page/pages/academic-staff-page/academic-staff-page.component';
+import { RegulationsPageComponent } from './pages/about-page/pages/regulations-page/regulations-page.component';
+import { ContactPageComponent } from './pages/about-page/pages/contact-page/contact-page.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { ProgramOverviewComponent } from './components/program-overview/program-overview.component';
+import { BolognaStudiesPageComponent } from './pages/studies-page/pages/bologna-studies-page/bologna-studies-page.component';
+import { TitleEquivalencePageComponent } from './pages/studies-page/pages/title-equivalence-page/title-equivalence-page.component';
+import { NostrificationAndEquivalencePageComponent } from './pages/studies-page/pages/nostrification-and-equivalence-page/nostrification-and-equivalence-page.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +68,12 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
     ServicesPageComponent,
     AcademicStaffPageComponent,
     RegulationsPageComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    NotFoundPageComponent,
+    ProgramOverviewComponent,
+    BolognaStudiesPageComponent,
+    TitleEquivalencePageComponent,
+    NostrificationAndEquivalencePageComponent,
   ],
   imports: [
     BrowserModule,

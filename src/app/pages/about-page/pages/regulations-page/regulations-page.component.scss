@@ -1,4 +1,4 @@
-@import "../../../variables";
+@import "../../../../../variables";
 
 .flex-container {
   display: flex;
@@ -18,18 +18,12 @@
     padding: 10px;
     justify-content: space-between;
 
-    h2 {
-      padding-top: 10px;
-      font-size: 25px;
-    }
-
     app-additional-navigation {
       flex: 0.3;
     }
 
     .main-content {
       flex: 0.65;
-
       p {
         .emphasis {
           font-weight: 500;

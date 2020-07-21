@@ -1,5 +1,14 @@
 <div class="container">
-  <span *ngFor="let route of routes" class="additional-route">
-    <a routerLink="{{ route.link }}">{{ route.name }}</a>
+  <span
+    *ngFor="let route of routes; let i = index"
+    class="additional-route"
+    [ngClass]="i === currentRouteIndex ? 'current' : null"
+  >
+    <a *ngIf="!route.link.startsWith('http')" routerLink="{{ route.link }}">
+      {{ route.name }}
+    </a>
+    <a *ngIf="route.link.startsWith('http')" href="{{ route.link }}">
+      {{ route.name }}
+    </a>
   </span>
 </div>

@@ -1,0 +1,35 @@
+<div class="flex-container">
+  <div class="title">
+    <app-breadcrumbs
+      [routes]="routes"
+      [currentRoute]="'Kontakt'"
+    ></app-breadcrumbs>
+    <h1>Kontakt</h1>
+  </div>
+  <div class="content-container">
+    <div class="main-content">
+      <h2>
+        Elektrotehnički fakultet u Sarajevu
+      </h2>
+
+      <p>
+        Zmaja od Bosne, bb. <br />
+        KAMPUS Univerziteta, <br />
+        71000 Sarajevo <br />
+        Bosna i Hercegovina
+      </p>
+      <p>
+        <span class="emphasis">Telefon:</span> ++387 33 250 700 <br />
+        <span class="emphasis">Fax:</span> ++387 33 250 725 <br />
+        <span class="emphasis">Email:</span>
+        <a href="mailto:etf@etf.unsa.ba"> etf@etf.unsa.ba </a><br />
+        <span class="emphasis">Stranica:</span>
+        <a href="http://www.etf.unsa.ba"> www.etf.unsa.ba </a>
+      </p>
+    </div>
+    <app-additional-navigation
+      [routes]="additionalRoutes"
+      [currentRouteIndex]="3"
+    ></app-additional-navigation>
+  </div>
+</div>

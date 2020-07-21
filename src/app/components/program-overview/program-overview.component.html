@@ -1,0 +1,39 @@
+<div
+  class="program-overview"
+  [ngClass]="
+    !shouldRenderLinkOnImage ? null : program.imgPosition === 'left' ? 'left' : 'right'
+  "
+>
+  <div class="img-container">
+    <div
+      class="img"
+      style="background-image: url('../../../assets/{{ program.img }}')"
+    ></div>
+    <div class="img-overlay"></div>
+
+    <span *ngIf="shouldRenderLinkOnImage" class="learn-more">
+      <a *ngIf="program.href; else elseBlock" href="{{ program.href }}">
+        Saznaj Više
+      </a>
+      <ng-template #elseBlock>
+        <a>
+          Saznaj Više
+        </a>
+      </ng-template>
+    </span>
+  </div>
+  <div class="content">
+    <h1>{{ program.title }}</h1>
+    <p>{{ program.brief }}</p>
+    <span *ngIf="!shouldRenderLinkOnImage" class="learn-more">
+      <a *ngIf="program.href; else elseBlock" href="{{ program.href }}">
+        Saznaj Više
+      </a>
+      <ng-template #elseBlock>
+        <a>
+          Saznaj Više
+        </a>
+      </ng-template>
+    </span>
+  </div>
+</div>

@@ -13,6 +13,7 @@
     &:last-child {
       border-bottom: 1px solid mat-color($app-accent, A200);
     }
+    
     a {
       display: inline-block;
       box-sizing: border-box;
@@ -23,11 +24,22 @@
       text-decoration: none;
       @include hover-transition();
       &:hover {
-        color: mat-color($app-primary, 800);
+        color: #000;
       }
 
       @media (max-width: 768px) {
         padding: 10px;
+      }
+    }
+  }
+
+  .current {
+    background-color: mat-color($app-primary);
+
+    a {
+      color: #fff;
+      &:hover {
+        color: #fff;
       }
     }
   }

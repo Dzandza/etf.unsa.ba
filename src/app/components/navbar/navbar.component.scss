@@ -80,9 +80,9 @@
       @media (max-width: 768px) {
         box-sizing: border-box;
         z-index: 1;
-        transform: translateY(-100%);
+        transform: translateY(-1000px);
         transition: ease 0.6s;
-        top: -100%;
+        top: -1000px;
         left: 0;
         right: 0;
         position: absolute;
@@ -134,7 +134,7 @@
   .nav-content {
     .nav-links {
       @media (max-width: 768px) {
-        transform: translateY(100vh);
+        transform: translateY(1000px);
         transition: ease 0.6s;
       }
     }
