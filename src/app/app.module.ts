@@ -38,6 +38,7 @@ import { ProgramOverviewComponent } from './components/program-overview/program-
 import { BolognaStudiesPageComponent } from './pages/studies-page/pages/bologna-studies-page/bologna-studies-page.component';
 import { TitleEquivalencePageComponent } from './pages/studies-page/pages/title-equivalence-page/title-equivalence-page.component';
 import { NostrificationAndEquivalencePageComponent } from './pages/studies-page/pages/nostrification-and-equivalence-page/nostrification-and-equivalence-page.component';
+import { NewsPieceComponent } from './components/news-piece/news-piece.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { NostrificationAndEquivalencePageComponent } from './pages/studies-page/
     BolognaStudiesPageComponent,
     TitleEquivalencePageComponent,
     NostrificationAndEquivalencePageComponent,
+    NewsPieceComponent,
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,7 @@
     object-fit: cover;
     width: 100%;
     height: 700px;
-    object-position: right;
+    object-position: center;
     z-index: -1;
 
     @media (max-width: 768px) {
@@ -140,7 +140,7 @@
 
   @media (max-width: 300px) {
     &:after {
-      height: 250px;
+      height: 270px;
     }
   }
 

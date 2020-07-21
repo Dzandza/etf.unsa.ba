@@ -9,7 +9,7 @@ export class NavbarComponent implements OnInit {
 
   isMenuOpen: boolean = false;
   isDropDownOpen: boolean = false;
-  shouldRenderLanguageIcon: boolean = window.innerWidth < 768;
+  shouldRenderLanguageIcon: boolean = window.innerWidth <= 768;
   constructor() { }
 
   ngOnInit(): void {

@@ -7,7 +7,7 @@ import { Component, HostListener, OnInit, Output, EventEmitter, Input } from '@a
 })
 export class NavOtherLinksComponent implements OnInit {
   language: string = "BS";
-  shouldRenderIcons: boolean = window.innerWidth >= 768;
+  shouldRenderIcons: boolean = window.innerWidth > 768;
   @Input() isDropDownOpen: boolean;
 
   @Output() navClick: EventEmitter<string> = new EventEmitter<string>();

@@ -1,0 +1,58 @@
+@import "../../../variables";
+
+.news-piece {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-top: 2px solid mat-color($app-accent, A200);
+  border-bottom: 2px solid mat-color($app-accent, A200);
+  margin: 20px 0;
+
+  .content {
+    flex: 1;
+    h1 {
+      color: mat-color($app-primary);
+    }
+
+
+    .learn-more {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        box-sizing: border-box;
+        text-align: center;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #fff;
+        border-radius: 5px;
+        background-color: mat-color($app-primary);
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+          background-color: mat-color($app-primary, 300);
+        }
+
+        @media (max-width: 768px) {
+          margin-top: 10px;
+          width: 100%;
+        }
+      }
+      @media (max-width: 768px) {
+       flex-direction: column;
+      }
+      
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column !important;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: stretch;
+  }
+}

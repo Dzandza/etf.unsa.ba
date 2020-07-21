@@ -1,10 +1,13 @@
 <div class="flex-container">
-    <div class="title">
-      <app-breadcrumbs
-        [routes]="routes"
-        [currentRoute]="'Novosti i obavještenja'"
-      ></app-breadcrumbs>
-      <h1>Novosti i obavještenja</h1>
-    </div>
+  <div class="title">
+    <app-breadcrumbs
+      [routes]="routes"
+      [currentRoute]="'Novosti i obavještenja'"
+    ></app-breadcrumbs>
+    <h1>Novosti i obavještenja</h1>
+    <app-news-piece
+      *ngFor="let newsPiece of news"
+      [newsPiece]="newsPiece"
+    ></app-news-piece>
   </div>
-  
+</div>
