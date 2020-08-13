@@ -39,6 +39,10 @@ import { BolognaStudiesPageComponent } from './pages/studies-page/pages/bologna-
 import { TitleEquivalencePageComponent } from './pages/studies-page/pages/title-equivalence-page/title-equivalence-page.component';
 import { NostrificationAndEquivalencePageComponent } from './pages/studies-page/pages/nostrification-and-equivalence-page/nostrification-and-equivalence-page.component';
 import { NewsPieceComponent } from './components/news-piece/news-piece.component';
+import { FullNewsPiecePageComponent } from './pages/news-page/pages/full-news-piece-page/full-news-piece-page.component';
+import { NationalProjectsPageComponent } from './pages/research-page/pages/national-projects-page/national-projects-page.component';
+import { InternationalProjectsPageComponent } from './pages/research-page/pages/international-projects-page/international-projects-page.component';
+import { ProjectComponent } from './components/project/project.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +80,10 @@ import { NewsPieceComponent } from './components/news-piece/news-piece.component
     TitleEquivalencePageComponent,
     NostrificationAndEquivalencePageComponent,
     NewsPieceComponent,
+    FullNewsPiecePageComponent,
+    NationalProjectsPageComponent,
+    InternationalProjectsPageComponent,
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,

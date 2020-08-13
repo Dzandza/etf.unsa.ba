@@ -1,10 +1,73 @@
 <div class="flex-container">
-    <div class="title">
-      <app-breadcrumbs
-        [routes]="routes"
-        [currentRoute]="'Naučni rad'"
-      ></app-breadcrumbs>
-      <h1>Naučni rad</h1>
-    </div>
+  <div class="title">
+    <app-breadcrumbs
+      [routes]="routes"
+      [currentRoute]="'Naučni rad'"
+    ></app-breadcrumbs>
+    <h1>Naučni rad</h1>
   </div>
-  
+  <div class="content-container">
+    <div class="main-content">
+      <p>
+        Pored obrazovanja, Fakultet se aktivno uključuje u istraživanje i razvoj
+        za industriju i naučne organizacije. 1991. godine, ukupna vrijednost
+        projekata istraživanja i razvoja realiziranih na Fakultetu dostigla je
+        milion KM (otprilike pola milijuna EUR).
+      </p>
+
+      <p>
+        U narednim godinama, Fakultet je angažiran na različitim projektima
+        obnove i revitalizacije Sarajeva i Bosne i Hercegovine, na različitim
+        nivoima planiranja, obnove i razvoja.
+      </p>
+
+      <p>
+        Danas, Elektrotehnički fakultet pokušava proširiti svoje istraživačko,
+        razvojno i profesionalno djelovanje na svim poljima svoje stručnosti i
+        nastavnog interesovanja.
+      </p>
+
+      <p>
+        U tom okviru, Fakultet nudi svoje usluge u:
+        <br />
+        1. Istraživačkim i razvojnim projektima u domaćoj i međunarodnoj saradnji
+        <br />
+
+        2. Konsultovanju
+        <br />
+
+        3. Studijam i analizi
+        <br />
+
+        4. Evaluaciji projekata
+        <br />
+
+        5. Dizajnu nestandardnih projekata i projekata implementacije rezultata
+        istraživanja
+        <br />
+
+        6. Realizaciji tenderske dokumentacije
+        <br />
+
+        7. Sprovođenju tendera i investicionih projekata
+      </p>
+
+      <p>
+        Izvođači i partneri na fakultetskim projektima očekuje da
+        će radna grupa, koja ima 4 akademika, 47 Doktora znanosti, 36 Magistra i
+        134 Dipl. El. Ing. (zaposlenih sa punim ili polovinom radnog vremena),
+        uspešno će dovršiti dodeljene i odobrene projekte na visokim naučnim i
+        profesionalnim standardima i nivoima kvaliteta.
+      </p>
+
+      <p>
+        Polja naučnoistraživačkih i razvojnih područja koja pokrivaju određeni
+        odjeli detaljnije su data na
+        <a routerLink="/odsjeci">stranicama odjela</a>.
+      </p>
+    </div>
+    <app-additional-navigation
+      [routes]="additionalRoutes"
+    ></app-additional-navigation>
+  </div>
+</div>

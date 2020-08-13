@@ -1,13 +1,29 @@
 <div
   class="program-overview"
   [ngClass]="
-    !shouldRenderLinkOnImage ? null : program.imgPosition === 'left' ? 'left' : 'right'
+    !shouldRenderLinkOnImage
+      ? null
+      : program.imgPosition === 'left'
+      ? 'left'
+      : 'right'
   "
 >
   <div class="img-container">
     <div
       class="img"
-      style="background-image: url('../../../assets/{{ program.img }}')"
+      [ngClass]="
+        program.img === 'aie-img.jpg'
+          ? 'aie'
+          : program.img === 'ee-img.jpg'
+          ? 'ee'
+          : program.img === 'ri-img.jpg'
+          ? 'ri'
+          : program.img === 'tk-img.jpg'
+          ? 'tk'
+          : program.img === 'rs-img.jpg'
+          ? 'rs'
+          : null
+      "
     ></div>
     <div class="img-overlay"></div>
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { News } from 'src/app/models/news.model';
+import { NewsService } from 'src/app/services/news.service';
 
 @Component({
   selector: 'app-news-overview',
@@ -6,16 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news-overview.component.scss']
 })
 export class NewsOverviewComponent implements OnInit {
-  current: number = 1;
+  current: number = 0;
+  news: News[] = [];
 
-  constructor() { }
+  constructor(private newsService: NewsService) { }
 
   ngOnInit(): void {
+    this.news = this.newsService.getTopNews();
   }
 
   handleNewsChange(direction: string) {
-    if(direction === 'left') this.current = this.current === 1 ? 3 : this.current - 1;
-    else this.current = this.current === 3 ? 1 : this.current + 1;
+    if(direction === 'left') this.current = this.current === 0 ? this.news.length - 1 : this.current - 1;
+    else this.current = this.current === this.news.length - 1 ? 0 : this.current + 1;
   }
 
 }

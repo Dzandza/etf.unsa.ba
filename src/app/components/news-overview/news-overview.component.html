@@ -4,41 +4,27 @@
     <div class="news-button" (click)="handleNewsChange('left')">
       <img src="assets/arrow-icon-left-light.svg" alt="arrow left" />
     </div>
-    <div class="news" [ngClass]="current === 1 ? 'active' : null">
+    <div
+      *ngFor="let newsPiece of news; let i = index"
+      class="news"
+      [ngClass]="current === i ? 'active' : null"
+    >
       <h3>
-        Upis u prvu godinu prvog ciklusa studija i prvu godinu stručnog studija
-        u studijskoj 2020/2021. godini
+        {{ newsPiece.title }}
       </h3>
-      <p>
-        Upis počinje od 16.07.2020. godine i traje do 24.07.2020. godine.
-        Kandidat koji je ostvario pravo na upis je obavezan da u navedenom
-        terminu dostavi originale uploadovanih dokumenata i izvrši upis, u
-        suprotnom smatra se da je...<a routerLink="/obavjestenja">Detaljnije</a>
+      <p
+        *ngFor="
+          let paragraph of newsPiece.text.substr(0, 230).split('\n') | slice:0:7;
+          let last = last
+        "
+      >
+        {{ paragraph + (last ? "..." : "") }}
+        <a *ngIf="last" [routerLink]="['/obavjestenja', newsPiece.id]">
+          Detaljnije
+        </a>
       </p>
     </div>
-    <div class="news" [ngClass]="current === 2 ? 'active' : null">
-      <h3>
-        Konačne rang-liste kandidata za upis na ETF-Sarajevo u akademskoj
-        2020/2021 godini
-      </h3>
-      <p>
-        Objavljene su konačne rang-liste kandidata za upis na prvu godinu Prvog
-        ciklusa studija (studijski programi Automatika i elektronika,
-        Elektroenergetika, Računarstvo i informatika i Telekominikacije) i na
-        prvu godinu Stručnog... <a routerLink="/obavjestenja">Detaljnije</a>
-      </p>
-    </div>
-    <div class="news" [ngClass]="current === 3 ? 'active' : null">
-      <h3>
-        Konkurs za izbor akademskog osoblja
-      </h3>
-      <p>
-        Na osnovu člana 103. stav (1) Zakona o visokom obrazovanju ("Službene
-        novine Kantona Sarajevo", broj: 33/17), člana 201. st. (1), (2) i (5)
-        Statuta Univerziteta u Sarajevu (broj: 01-1093-3-1/18 od 28.11.2018.
-        godine), Odluke... <a routerLink="/obavjestenja">Detaljnije</a>
-      </p>
-    </div>
+
     <div class="news-button" (click)="handleNewsChange('right')">
       <img src="assets/arrow-icon-right-light.svg" alt="arrow right" />
     </div>

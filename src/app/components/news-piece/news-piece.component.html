@@ -1,10 +1,10 @@
 <div class="news-piece">
   <div class="content">
     <h1>{{ newsPiece.title }}</h1>
-    <p>{{ newsPiece.brief }}</p>
+    <p *ngFor="let paragraph of brief; let last = last">{{ paragraph + (last && newsPiece.text.length >= 230 ? "..." : "")}}</p>
     <div class="learn-more">
-      <span>{{ newsPiece.date }}</span>
-      <a>
+      <span>{{ date }}</span>
+      <a [routerLink]="newsPiece.id">
         Saznaj Više
       </a>
     </div>

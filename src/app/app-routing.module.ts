@@ -4,6 +4,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { StudiesPageComponent } from './pages/studies-page/studies-page.component';
 import { ResearchPageComponent } from './pages/research-page/research-page.component';
+import { InternationalProjectsPageComponent } from './pages/research-page/pages/international-projects-page/international-projects-page.component';
+import { NationalProjectsPageComponent } from './pages/research-page/pages/national-projects-page/national-projects-page.component';
 import { NewsPageComponent } from './pages/news-page/news-page.component';
 import { ProgramsPageComponent } from './pages/programs-page/programs-page.component';
 import { OrganisationsPageComponent } from './pages/organisations-page/organisations-page.component';
@@ -15,6 +17,7 @@ import { BolognaStudiesPageComponent } from './pages/studies-page/pages/bologna-
 import { TitleEquivalencePageComponent } from './pages/studies-page/pages/title-equivalence-page/title-equivalence-page.component';
 import { NostrificationAndEquivalencePageComponent } from './pages/studies-page/pages/nostrification-and-equivalence-page/nostrification-and-equivalence-page.component';
 import { NotFoundPageComponent } from "./pages/not-found-page/not-found-page.component";
+import { FullNewsPiecePageComponent } from "./pages/news-page/pages/full-news-piece-page/full-news-piece-page.component"
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -29,9 +32,13 @@ const routes: Routes = [
   { path: 'studij/nostrifikacija-i-ekvivalencija', component: NostrificationAndEquivalencePageComponent },
   { path: 'odsjeci', component: ProgramsPageComponent },
   { path: 'naucni-rad', component: ResearchPageComponent },
+  { path: 'naucni-rad/nacionalni-projekti', component: NationalProjectsPageComponent },
+  { path: 'naucni-rad/medjunarodni-projekti', component: InternationalProjectsPageComponent },
   { path: 'obavjestenja', component: NewsPageComponent },
+  { path: 'obavjestenja/:id', component: FullNewsPiecePageComponent },
   { path: 'organizacije', component: OrganisationsPageComponent },
-  { path: '**', component: NotFoundPageComponent }
+  { path: '404', component: NotFoundPageComponent },
+  { path: '**', redirectTo: "404"}
 ];
 
 @NgModule({

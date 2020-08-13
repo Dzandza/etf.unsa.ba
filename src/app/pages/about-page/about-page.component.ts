@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route } from 'src/app/models/route.model';
 
 @Component({
   selector: 'app-about-page',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-page.component.scss']
 })
 export class AboutPageComponent implements OnInit {
-  routes: any = [{ name: "Početna", link: "" }]
-  additionalRoutes: any = [
+  routes: Route[] = [{ name: "Početna", link: "" }]
+  additionalRoutes: Route[] = [
     { name: "Službe", link: "sluzbe", },
     { name: "Akademsko osoblje", link: "akademsko-osoblje", },
     { name: "Propisi", link: "propisi", },

@@ -1,0 +1,29 @@
+<div class="flex-container">
+  <div class="title">
+    <app-breadcrumbs
+      [routes]="routes"
+      [currentRoute]="currentRoute"
+    ></app-breadcrumbs>
+    <h1>{{ newsPiece.title }}</h1>
+  </div>
+  <div class="content-container">
+    <div class="main-content">
+      <p *ngFor="let paragraph of newsPiece.text.split('\n')">
+        {{ paragraph }}
+      </p>
+      <div class="attachments" *ngIf="newsPiece.attachments.length > 0">
+        <h2>Dodaci:</h2>
+        <a *ngFor="let attachment of newsPiece.attachments">
+          {{ attachment.title }}
+        </a>
+      </div>
+      <div class="date">
+        <p>{{ date }}</p>
+      </div>
+    </div>
+    <app-additional-navigation
+      [routes]="additionalRoutes"
+      [currentRouteIndex]="currentRouteIndex"
+    ></app-additional-navigation>
+  </div>
+</div>

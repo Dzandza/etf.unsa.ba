@@ -20,6 +20,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      span {
+        font-size: 10px;
+        text-transform: capitalize;
+      }
+
       a {
         box-sizing: border-box;
         text-align: center;
@@ -30,9 +35,10 @@
         background-color: mat-color($app-primary);
         text-decoration: none;
         cursor: pointer;
+        @include hover-transition();
 
         &:hover {
-          background-color: mat-color($app-primary, 300);
+          background-color: mat-color($app-primary, 400);
         }
 
         @media (max-width: 768px) {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route } from 'src/app/models/route.model';
 
 @Component({
   selector: 'app-nostrification-and-equivalence-page',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nostrification-and-equivalence-page.component.scss']
 })
 export class NostrificationAndEquivalencePageComponent implements OnInit {
-  routes: any = [{ name: "Početna", link: "" }, { name: "Studij", link: "/studij" }]
-  additionalRoutes: any = [
+  routes: Route[] = [{ name: "Početna", link: "" }, { name: "Studij", link: "/studij" }]
+  additionalRoutes: Route[] = [
     { name: "Bologna", link: "/studij/bologna", },
     { name: "Ekvivalencija zvanja", link: "/studij/ekvivalencija-zvanja", },
     { name: "Nostrifikacija i ekvivalencija", link: "/studij/nostrifikacija-i-ekvivalencija", },

@@ -1,0 +1,28 @@
+<div class="project">
+  <div class="content">
+    <h1>{{ project.title }}</h1>
+    <div class="details">
+      <div *ngIf="project.coordinator">
+        <h2>Koordinacija projekta</h2>
+        <p>{{ project.coordinator }}</p>
+      </div>
+      <div>
+        <h2>Voditelj projekta</h2>
+        <p>{{ project.leader }}</p>
+      </div>
+      <div>
+        <h2>Finansiranje</h2>
+        <p>{{ project.financing }}</p>
+      </div>
+      <div>
+        <h2>Trajanje projekta</h2>
+        <p>{{ duration }}</p>
+      </div>
+      <div class="website" *ngIf="project.website">
+        <h2>Web stranica</h2>
+        <p ><a href="{{project.website}}">{{ project.website }}</a></p>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -63,13 +63,11 @@
         @include hover-transition();
         padding: 10px 20px;
         text-decoration: none;
-        border: 2px solid mat-color($app-primary);
         background-color: mat-color($app-primary);
         color: white;
 
         &:hover {
-          color: mat-color($app-primary);
-          background-color: mat-color($app-primary, 50);
+          background-color: mat-color($app-primary, 400);
         }
 
         @media (max-width: 768px) {

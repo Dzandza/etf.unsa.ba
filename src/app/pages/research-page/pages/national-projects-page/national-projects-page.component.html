@@ -1,0 +1,19 @@
+<div class="flex-container">
+    <div class="title">
+      <app-breadcrumbs
+        [routes]="routes"
+        [currentRoute]="'Nacionalni projekti'"
+      ></app-breadcrumbs>
+      <h1>Nacionalni projekti</h1>
+    </div>
+    <div class="content-container">
+      <div class="main-content">
+        <app-project *ngFor="let project of projects" [project]="project"></app-project>
+      </div>
+      <app-additional-navigation
+        [routes]="additionalRoutes"
+        [currentRouteIndex]="0"
+      ></app-additional-navigation>
+    </div>
+  </div>
+  

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route } from 'src/app/models/route.model';
 
 @Component({
   selector: 'app-research-page',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./research-page.component.scss']
 })
 export class ResearchPageComponent implements OnInit {
-  routes: any = [{ name: "Početna", link: "" }]
-
+  routes: Route[] = [{ name: "Početna", link: "" }]
+  additionalRoutes: Route[] = [
+    { name: "Nacionalni projekti", link: "nacionalni-projekti", },
+    { name: "Međunarodni projekti", link: "medjunarodni-projekti", },
+    { name: "Projekti mobilnosti", link: "http://www.erasmus.unsa.ba/", }
+  ]
   constructor() { }
 
   ngOnInit(): void {
