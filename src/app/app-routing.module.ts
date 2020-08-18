@@ -10,6 +10,7 @@ import { NewsPageComponent } from './pages/news-page/news-page.component';
 import { ProgramsPageComponent } from './pages/programs-page/programs-page.component';
 import { OrganisationsPageComponent } from './pages/organisations-page/organisations-page.component';
 import { AcademicStaffPageComponent } from './pages/about-page/pages/academic-staff-page/academic-staff-page.component';
+import { StaffMemberPageComponent } from './pages/about-page/pages/academic-staff-page/pages/staff-member-page/staff-member-page.component';
 import { ContactPageComponent } from './pages/about-page/pages/contact-page/contact-page.component';
 import { RegulationsPageComponent } from './pages/about-page/pages/regulations-page/regulations-page.component';
 import { ServicesPageComponent } from './pages/about-page/pages/services-page/services-page.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'o-fakultetu', component: AboutPageComponent },
   { path: 'o-fakultetu/akademsko-osoblje', component: AcademicStaffPageComponent },
+  { path: 'o-fakultetu/akademsko-osoblje/:id', component: StaffMemberPageComponent },
   { path: 'o-fakultetu/kontakt', component: ContactPageComponent },
   { path: 'o-fakultetu/propisi', component: RegulationsPageComponent },
   { path: 'o-fakultetu/sluzbe', component: ServicesPageComponent },

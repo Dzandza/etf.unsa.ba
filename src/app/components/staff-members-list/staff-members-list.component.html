@@ -1,0 +1,21 @@
+<div class="member-list">
+  <h2 (click)="handleClick()">
+    {{ title }}
+    <img
+      *ngIf="!isExpanded"
+      src="assets/arrow-icon-down.svg"
+      alt="arrow icon"
+    />
+    <img *ngIf="isExpanded" src="assets/arrow-icon-up.svg" alt="arrow icon" />
+  </h2>
+  <div *ngIf="isExpanded">
+    <p *ngFor="let member of members">
+      <span [ngStyle]="{'min-width': minWidth ? '50px' : 0}">
+        {{ member.title }}
+      </span>
+      <a routerLink="{{ member.id }}">
+        {{ member.firstName + " " + member.lastName }}</a
+      >
+    </p>
+  </div>
+</div>

@@ -24,8 +24,31 @@
 
     .main-content {
       flex: 0.65;
-      p {
 
+      .members-table {
+        overflow-x: auto;
+        table {
+          min-width: 100%;
+          margin: 10px 0 20px 0;
+          tr {
+            text-align: center;
+            th {
+              min-width: 120px;
+              color: mat-color($app-primary) !important;
+              border-bottom: 2px solid mat-color($app-accent, A200);
+              padding: 5px;
+            }
+            :first-child {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      h2 {
+        margin: 20px 0 10px 0;
+      }
+
+      p {
         a {
           color: mat-color($app-primary);
           cursor: pointer;
@@ -37,10 +60,22 @@
           }
         }
       }
+
+      .deans-office-members {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        margin: 20px 2%;
+        app-deans-office-member {
+          margin: 0 3px;
+          flex-basis: 48%;
+        }
+      }
     }
 
     @media (max-width: 768px) {
-        flex-direction: column-reverse;
+      flex-direction: column-reverse;
     }
   }
 

@@ -7,7 +7,106 @@
     <h1>Akademsko osoblje</h1>
   </div>
   <div class="content-container">
-    <div class="main-content"></div>
+    <div class="main-content">
+      <p>
+        Članovi akademskog osoblja imaju dugo i ugledno iskustvo u nastavi,
+        istraživanju, kao i praktično iskustvo, te su uključeni u profesionalno
+        društvo.
+      </p>
+
+      <p>
+        Akademsko osoblje koje doprinosi dodiplomskim programima elektrotehnike,
+        raščlanjeno prema kategoriji zaposlenosti i vrsti radnog mjesta navedeno
+        je u sljedećoj tabeli. Podaci navedeni za nenastavno osoblje su ukupni
+        broj ovih vrsta zaposlenih na Elektrotehničkom fakultetu u Sarajevu.
+        Doprinose sva četiri bachelors programa.
+      </p>
+      <div class="members-table">
+        <table>
+          <tr>
+            <th>Pozicija</th>
+            <th>Br. full time podružnica</th>
+            <th>Br. part time podružnica</th>
+            <th>Ukupan broj zaposlenih</th>
+          </tr>
+          <tr>
+            <td>Tehnički</td>
+            <td>7</td>
+            <td>0</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Administrativni</td>
+            <td>13</td>
+            <td>0</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>Servisni</td>
+            <td>8</td>
+            <td>0</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>UKUPNO</td>
+            <td>28</td>
+            <td>0</td>
+            <td>28</td>
+          </tr>
+        </table>
+      </div>
+      <p>
+        Stupnjevi nastavnog osoblja su u oblastima relevantnim za nastavne
+        planove i programe: uglavnom iz elektrotehnike - elektroenergetike,
+        računarske znanosti ili matematike. Za temeljni kurikulum su odgovorni
+        djelatnici nastavnog osoblja koji rade sa punim radnim vremenom i imaju
+        stručnost u odgovarajućoj oblasti. Više podataka o članovima nastavnog
+        osoblja nalazi se u priručniku za osoblje koji je priložen ovom
+        izvještaju. Važno je napomenuti da su svi članovi nastavnog osoblja
+        odabrani i odobreni na temelju strogih procedura utvrđenih u nekoliko
+        pravnih dokumenata, uključujući Zakon o visokom obrazovanju Kantona
+        Sarajevo, te dva statuta Univerziteta u Sarajevu i Elektrotehničkog
+        fakulteta u Sarajevu. Ovi postupci su sadržani od javnih saopštenja
+        raspoloživih nastavnih mjesta i konačno, uz odobrenje Senata
+        Univerziteta u Sarajevu o rezultatu konačnog odabira i dodijeljenog
+        nastavnog mjesta.
+      </p>
+      <div class="deans-office-members">
+        <app-deans-office-member
+          *ngFor="let member of deansOfficeMembers"
+          [member]="member"
+        >
+        </app-deans-office-member>
+      </div>
+      <app-staff-members-list
+        [members]="emeritusProfessors"
+        [title]="'Emeritus profesori'"
+      ></app-staff-members-list>
+      <app-staff-members-list
+        [members]="professors"
+        [title]="'Redovni profesori'"
+      ></app-staff-members-list>
+      <app-staff-members-list
+        [members]="associateProfessors"
+        [title]="'Vanredni profesori'"
+      ></app-staff-members-list>
+      <app-staff-members-list
+        [members]="assistantProfessors"
+        [title]="'Docenti'"
+      ></app-staff-members-list>
+      <app-staff-members-list
+        [members]="seniorAssistants"
+        [title]="'Viši asistenti'"
+      ></app-staff-members-list>
+      <app-staff-members-list
+        [members]="teachingAssistants"
+        [title]="'Asistenti'"
+      ></app-staff-members-list>
+      <app-staff-members-list
+      [members]="industryExperts"
+      [title]="'Stručnjaci iz prakse'"
+    ></app-staff-members-list>
+    </div>
     <app-additional-navigation
       [routes]="additionalRoutes"
       [currentRouteIndex]="1"

@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Route } from 'src/app/models/route.model';
-import { NewsService } from 'src/app/services/news.service';
+import { NewsService } from 'src/app/services/news/news.service';
 import { News } from 'src/app/models/news.model';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators'
 import { getStandarDateFormat, getStandardTimeFormat } from 'src/app/helpers';
 

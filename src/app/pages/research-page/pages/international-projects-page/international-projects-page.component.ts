@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Route } from 'src/app/models/route.model';
 import { Project } from 'src/app/models/project.model';
-import { ProjectService } from 'src/app/services/project.service';
+import { ProjectService } from 'src/app/services/project/project.service';
 
 @Component({
   selector: 'app-international-projects-page',

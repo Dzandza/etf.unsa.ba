@@ -1,0 +1,40 @@
+<div class="flex-container">
+  <div class="title">
+    <app-breadcrumbs
+      [routes]="routes"
+      [currentRoute]="
+        (member.title ? member.title : '') + ' ' + member.firstName + ' ' + member.lastName
+      "
+    ></app-breadcrumbs>
+    <h1>{{ (member.title ? member.title : "") + " " + member.firstName + " " + member.lastName }}</h1>
+  </div>
+  <div class="content-container">
+    <div class="main-content">
+      <div class="member-img">
+        <img src="assets/placeholder.svg" alt="placeholder" />
+      </div>
+      <div class="info">
+        <h3>Pozicija</h3>
+        <p>{{ member.position }}</p>
+        <h3>Odsjek</h3>
+        <p>{{ member.department }}</p>
+        <h3>Email</h3>
+        <p>
+          <a href="mailto:{{ member.email }}">{{ member.email }}</a>
+        </p>
+        <h3>Phone</h3>
+        <p>{{ member.phone }}</p>
+        <h3>Fax</h3>
+        <p>{{ member.fax }}</p>
+
+        <p>
+          <a href="{{ member.cv }}">Curriculum vitae</a>
+        </p>
+      </div>
+    </div>
+    <app-additional-navigation
+      [routes]="additionalRoutes"
+      [currentRouteIndex]="1"
+    ></app-additional-navigation>
+  </div>
+</div>

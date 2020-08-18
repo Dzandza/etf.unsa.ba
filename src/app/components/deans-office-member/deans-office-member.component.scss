@@ -1,0 +1,52 @@
+@import "../../../variables";
+
+.member {
+  box-sizing: border-box;
+  width: 300px;
+  margin-bottom: 30px;
+  border: 2px solid mat-color($app-accent, A200);
+  overflow: hidden;
+  height: 550px;
+  border-radius: 5px;
+
+  .member-img {
+    width: 296px;
+    height: 400px;
+    background-color: #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    img {
+      height: 30px;
+      width: auto;
+    }
+
+    @media (max-width: 768px) {
+      width: 266px;
+      height: 350px;
+    }
+  }
+
+  .info {
+    padding: 10px;
+    text-align: center;
+    h2 {
+      a {
+        color: mat-color($app-primary);
+        cursor: pointer;
+        text-decoration: none;
+        @include hover-transition();
+
+        &:hover {
+          color: mat-color($app-accent, A400);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 270px;
+    height: 530px;
+  }
+}

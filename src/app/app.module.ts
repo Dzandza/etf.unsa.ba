@@ -43,6 +43,9 @@ import { FullNewsPiecePageComponent } from './pages/news-page/pages/full-news-pi
 import { NationalProjectsPageComponent } from './pages/research-page/pages/national-projects-page/national-projects-page.component';
 import { InternationalProjectsPageComponent } from './pages/research-page/pages/international-projects-page/international-projects-page.component';
 import { ProjectComponent } from './components/project/project.component';
+import { DeansOfficeMemberComponent } from './components/deans-office-member/deans-office-member.component';
+import { StaffMemberPageComponent } from './pages/about-page/pages/academic-staff-page/pages/staff-member-page/staff-member-page.component';
+import { StaffMembersListComponent } from './components/staff-members-list/staff-members-list.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +87,9 @@ import { ProjectComponent } from './components/project/project.component';
     NationalProjectsPageComponent,
     InternationalProjectsPageComponent,
     ProjectComponent,
+    DeansOfficeMemberComponent,
+    StaffMemberPageComponent,
+    StaffMembersListComponent,
   ],
   imports: [
     BrowserModule,
